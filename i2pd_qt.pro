@@ -223,7 +223,15 @@ DISTFILES += \
     android-x86/gradlew \
     android-x86/gradlew.bat \
     android-x86/res/values/libs.xml \
-    android-x86/settings.gradle
+    android-x86/settings.gradle \
+    android-x86_64/AndroidManifest.xml \
+    android-x86_64/build.gradle \
+    android-x86_64/gradle.properties \
+    android-x86_64/gradle/wrapper/gradle-wrapper.properties \
+    android-x86_64/gradlew \
+    android-x86_64/gradlew.bat \
+    android-x86_64/res/values/libs.xml \
+    android-x86_64/settings.gradle
 
 contains(ANDROID_TARGET_ARCH,x86_64) {
     ANDROID_PACKAGE_SOURCE_DIR = \
