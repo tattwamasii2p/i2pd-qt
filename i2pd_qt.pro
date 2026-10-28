@@ -199,3 +199,56 @@ windows {
 	#INSTALLS += sources
 }
 
+DISTFILES += \
+    android-ar64-v8a/AndroidManifest.xml \
+    android-ar64-v8a/build.gradle \
+    android-ar64-v8a/gradle.properties \
+    android-ar64-v8a/gradle/wrapper/gradle-wrapper.properties \
+    android-ar64-v8a/gradlew \
+    android-ar64-v8a/gradlew.bat \
+    android-ar64-v8a/res/values/libs.xml \
+    android-ar64-v8a/settings.gradle \
+    android-arm-v7a/AndroidManifest.xml \
+    android-arm-v7a/build.gradle \
+    android-arm-v7a/gradle.properties \
+    android-arm-v7a/gradle/wrapper/gradle-wrapper.properties \
+    android-arm-v7a/gradlew \
+    android-arm-v7a/gradlew.bat \
+    android-arm-v7a/res/values/libs.xml \
+    android-arm-v7a/settings.gradle \
+    android-x86/AndroidManifest.xml \
+    android-x86/build.gradle \
+    android-x86/gradle.properties \
+    android-x86/gradle/wrapper/gradle-wrapper.properties \
+    android-x86/gradlew \
+    android-x86/gradlew.bat \
+    android-x86/res/values/libs.xml \
+    android-x86/settings.gradle \
+    android-x86_64/AndroidManifest.xml \
+    android-x86_64/build.gradle \
+    android-x86_64/gradle.properties \
+    android-x86_64/gradle/wrapper/gradle-wrapper.properties \
+    android-x86_64/gradlew \
+    android-x86_64/gradlew.bat \
+    android-x86_64/res/values/libs.xml \
+    android-x86_64/settings.gradle
+
+contains(ANDROID_TARGET_ARCH,x86_64) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/android-x86_64
+}
+
+contains(ANDROID_TARGET_ARCH,x86) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/android-x86
+}
+
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/android-arm-v7a
+}
+
+contains(ANDROID_TARGET_ARCH,arm64-v8a) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/android-ar64-v8a
+}
